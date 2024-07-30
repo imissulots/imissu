@@ -1,0 +1,321 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Arial", sans-serif;
+  background-color: #ffc3c3;
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: "The Breaks Script";
+  src: url("TheBreaksScript.ttf") format("truetype"); /* Adjust the path if necessary */
+}
+
+.hearts {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.heart1 {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  top: 40px;
+  left: 20px;
+  transform: rotate(-20deg);
+  animation: pulse1 9s infinite ease-in-out;
+}
+
+.heart2 {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  top: 10px;
+  transform: rotate(-40deg);
+  animation: pulse2 11s infinite ease-in-out;
+}
+
+.heart3 {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  top: 10px;
+  right: 20px;
+  transform: rotate(17deg);
+  animation: pulse3 8s infinite ease-in-out;
+}
+
+.heart4 {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  left: 339px;
+  transform: rotate(9deg);
+  animation: pulse4 10s infinite ease-in-out;
+}
+
+.heart5 {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  top: 310px;
+  right: 436px;
+  transform: rotate(-40deg);
+  animation: pulse5 9s infinite ease-in-out;
+}
+
+.heart6 {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  bottom: 110px;
+  right: 124px;
+  transform: rotate(9deg);
+  animation: pulse6 12s infinite ease-in-out;
+}
+
+.heart7 {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  bottom: 40px;
+  left: 50px;
+  transform: rotate(-18deg);
+  animation: pulse7 11s infinite ease-in-out;
+}
+
+.heart8 {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  bottom: 26px;
+  transform: rotate(20deg);
+  animation: pulse8 10s infinite ease-in-out;
+}
+
+@keyframes pulse1 {
+  0% {
+    transform: rotate(-20deg) scale(1);
+  }
+  50% {
+    transform: rotate(-20deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(-20deg) scale(1);
+  }
+}
+
+@keyframes pulse2 {
+  0% {
+    transform: rotate(-40deg) scale(1);
+  }
+  50% {
+    transform: rotate(-40deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(-40deg) scale(1);
+  }
+}
+
+@keyframes pulse3 {
+  0% {
+    transform: rotate(17deg) scale(1);
+  }
+  50% {
+    transform: rotate(17deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(17deg) scale(1);
+  }
+}
+
+@keyframes pulse4 {
+  0% {
+    transform: rotate(9deg) scale(1);
+  }
+  50% {
+    transform: rotate(9deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(9deg) scale(1);
+  }
+}
+
+@keyframes pulse5 {
+  0% {
+    transform: rotate(-40deg) scale(1);
+  }
+  50% {
+    transform: rotate(-40deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(-40deg) scale(1);
+  }
+}
+
+@keyframes pulse6 {
+  0% {
+    transform: rotate(-9deg) scale(1);
+  }
+  50% {
+    transform: rotate(-9deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(-9deg) scale(1);
+  }
+}
+
+@keyframes pulse7 {
+  0% {
+    transform: rotate(-18deg) scale(1);
+  }
+  50% {
+    transform: rotate(-18deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(-18deg) scale(1);
+  }
+}
+
+@keyframes pulse8 {
+  0% {
+    transform: rotate(20deg) scale(1);
+  }
+  50% {
+    transform: rotate(20deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(20deg) scale(1);
+  }
+}
+
+.envelope {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.letter {
+  width: 400px;
+  height: 800px;
+  animation: bobbing 6s infinite;
+}
+
+@keyframes bobbing {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes animate-left {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-500px);
+  }
+}
+
+.arrowcontainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.arrow {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  right: 950px;
+  bottom: 120px;
+}
+
+.press {
+  color: white;
+  font-family: "The Breaks Script";
+  font-size: 72px;
+  position: absolute;
+  bottom: 130px;
+  left: 170px;
+  animation: bobbing 8s infinite;
+}
+
+.envelope-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.animate-left {
+  animation: animate-left 2s forwards;
+}
+
+.visible {
+    animation: fadeout 2s forwards;
+  }
+
+  @keyframes fadeout {
+        0% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+        }
+  }
+
+  .message {
+    width: 500px;
+    height: 550px;
+    background-color: #f9ddda;
+    border-radius: 45px;
+    border-color: black;
+    position: absolute;
+    color: black;
+    font-size: 20px;
+    margin: 20px auto;
+    text-align: center;
+    z-index: 10;
+    right: 170px;
+    top: 850px;
+    outline: 5px solid black;
+    animation: bobbing 14s infinite;
+    font-family: "The Breaks Script";
+    opacity: 0;
+}
+
+.comein {
+  animation: woosh 2s forwards;
+}
+
+@keyframes woosh {
+  
+  0% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(-700px);
+  }
+}
